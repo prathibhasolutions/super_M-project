@@ -1,0 +1,12 @@
+{% extends "master.html" %}
+{% block title %}
+    All details about {{x.product_name}}
+{% endblock %}
+{% block content %}
+    <h1> {{ all_items.product_name }} </h1>
+    <p> Date of arrival :{{ all_items.date_arrived }} </p>
+    <p> Price : {{ all_items.price }} </p>
+    <p> Quantity : {{ all_items.quantity }} </p>
+    <p> Expiry date : {{ all_items.expiry_date }} </p>
+    <p>Back to <a href="/items">items</a></p>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "master.html" %}
+
+{% block title %}
+    Add dealer
+{% endblock %}
+
+{% block content %}
+    <div class="container mt-5" style="max-width: 500px";>
+        <div class="card p-4 shadow-sm">
+            <h2 class="text-center mb-4 text-secondary">Add a dealer</h2>
+            <form method="POST">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label class="form-label" fw-bold>Dealer name</label>
+                    <input type="text" name="dealer_name" placeholder="Enter name">
+                </div>
+                <div class="mb-3">
+                    <label class="form-level" fw-bold>Phone No</label>
+                    <input type="number" name="dealer_phNo" placeholder="Enter phonenumber">
+                </div>
+                <div class="mb-3">
+                    <label class="form-level" fw-bold>Address</label>
+                    <input type="text" name="dealer_add"  placeholder="Enter address">
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>    
+    </div>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE>
+<html>
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'style.css' %}"
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="brand"><img src="{% static 'grocery-store.png' %}">Supermarket</li>
+             {% if request.session.is_authenticated %}
+            <li><a href="{% url 'main' %}">Home</a></li>
+            <li><a href="{% url 'items' %}">Item</a></li>
+            <li><a href="{% url 'update' %}">Sell Item</a></li>
+            <li><a href="{% url 'dealer' %}">Add dealer</a></li>
+            <li><a href="{% url 'admin:index' %}">Admin</a></li>
+            <div class="to_right">
+                <li>{{ request.session.username }}<img src="{% static 'user.png' %}"></li>
+                <li ><a href="{% url 'logout' %}"><img src="{% static 'logout.png' %}">Logout</a></li>
+            </div>
+            {% endif %}
+        </ul>
+    </nav>
+    {% block content %}
+    
+    {% endblock %}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

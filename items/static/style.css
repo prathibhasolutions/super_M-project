@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=SN+Pro:ital,wght@0,200..900;1,200..900&family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Varela+Round&display=swap');
+
+
+.grid-container{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    height: 400px;
+    margin-top: 200px;
+    font-family: "Varela Round", sans-serif;
+}
+
+
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+table.table.table-striped-columns {
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+.create-grid{
+    height: 100vh
+}
+.total{
+    justify-items: center;
+}
+.profit{
+    justify-items: center;
+}
+p{
+    text-align: center;
+}
+nav{
+    font-family: "SN Pro", sans-serif;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    height: 65px;
+    background-color: #8BB918;
+    color:black;
+}
+nav ul li{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.brand{
+    padding-left: 10px;
+    font-weight: bold;
+}
+.brand img{
+    width: 30px;
+    height: auto;
+}
+.to_right{
+    margin-left: auto;
+}
+.to_right img{
+    width:20px;
+    height: auto;
+}
+.form-control{
+    padding-left: 20px;
+}

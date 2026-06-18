@@ -1,0 +1,32 @@
+{% extends "master.html" %}
+
+{% block title %}
+    My SuperMarket
+{% endblock %}
+
+
+{% block content %}
+  <div class="grid-container">
+    <h1>My SuperMarket</h1>
+
+    <h3>Items</h3>
+    
+    <p>Check out all our <a href="items/">items</a></p>
+    <a href="create/">
+      <button type="button" class="btn btn-secondary">Add Item</button>
+    </a>
+
+    <a href="update/">
+      <button type="button" class="btn btn-secondary">Sell Item</button>
+    </a>
+
+    <a href="dealer/">
+      <button type="button" class="btn btn-secondary">Add dealer</button>
+    </a>
+
+    <a href="{% url 'admin:index' %}" class="admin-btn">
+      <button type="button" class="btn btn-secondary">Admin</button>
+    </a>
+  </div>
+
+{% endblock %}

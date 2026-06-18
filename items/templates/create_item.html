@@ -1,0 +1,46 @@
+{% extends "master.html" %}
+
+{% block title %}
+    Add an Item
+{% endblock %}
+
+{% block content %}
+    <div class="container mt-5" style="max-width: 500px">
+        <div class="card p-4 shadow-sm">
+            <h2 class="text-center mb-4 text-secondary">Add new Product</h2>
+            <form method="POST">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label class="form-label" fw-bold>Arrived on</label>
+                    <input type="date" name="date_arrived" placeholder="Enter date">
+                </div>
+                <div class="mb-3">
+                    <label class="form-level" fw-bold>Product Name</label>
+                    <input type="text" name="product_name" placeholder="Enter product">
+                </div>
+                <div class="mb-3">
+                    <label class="form-level" fw-bold>Price</label>
+                    <input type="number" name="price" step="0.01" placeholder="Enter price" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-level" fw-bold>Quantity</label>
+                    <input type="number" name="quantity" placeholder="Enter quantity">
+                </div>
+                <div class="mb-3">
+                    <label class="form-level" fw-bold>Expiry Date</label>
+                    <input type="date" name="expiry_date" placeholder="Enter date">
+                </div>
+                <div class="mb-3">
+                    <label class="form-level" fw-bold>Dealer</label>
+                    <select name="dealer" id="dealer">
+                        <option value="" selected disabled>Choose dealer</option>
+                        {% for x in dealer_s %}
+                            <option value="{{ x.id }}">{{ x.dealer_name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>    
+    </div>
+{% endblock %}

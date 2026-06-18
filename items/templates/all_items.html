@@ -1,0 +1,43 @@
+{% extends "master.html" %}
+{% block title %}
+    My SuperMarket-List of all items
+{% endblock %}
+
+{% block content %}
+  <div class="create-grid">
+    <table class="table table-striped-columns">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Product</th>
+          <th scope="col">Date Arrived</th>
+          <th scope="col">Price</th>
+          <th scope="col">Quantity</th>
+          <th scope="col">Expiry date</th>
+          <th scope="col">Dealer</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for x in all_items %}
+          <tr>
+            <td>{{ x.id}}</td>
+            <td>{{ x.product_name }}</td>
+            <td>{{ x.date_arrived }}</td>
+            <td>{{ x.price }}</td>
+            <td>{{ x.quantity }}</td>
+            <td>{{ x.expiry_date }}</td>
+            <td>{{ x.dealer.dealer_name}}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <div class="total">
+      <h3>Total Inventory Value: Rs.{{ total_finance }}</h3>
+    </div>
+    <div class="profit">
+      <h3>Profit: Rs.{{ profit }}</h3>
+    </div>
+    <p>Go back to <a href="{% url 'main' %}">Home</a></p>
+  </div>
+{% endblock %}
