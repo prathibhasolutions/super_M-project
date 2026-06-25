@@ -53,10 +53,10 @@ def main(request):
 def dealer(request):
   if request.method=="POST":
     dealer_name=request.POST.get('dealer_name')
-    dealer_phNo=request.POST.get('delaer_phNo')
+    dealer_phNo=request.POST.get('dealer_phNo')
     dealer_add=request.POST.get('dealer_add')
-
-    Dealer.objects.create(dealer_name=dealer_name, dealer_phNo=dealer_phNo, dealer_add=dealer_add)
+    dealer_email=request.POST.get('dealer_email')
+    Dealer.objects.create(dealer_name=dealer_name, dealer_phNo=dealer_phNo, dealer_add=dealer_add, dealer_email=dealer_email)
     return redirect('main')
   return render(request, 'dealer.html') 
 
