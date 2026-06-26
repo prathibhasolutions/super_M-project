@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-yc!jl%ioh9*86!3(h(yi6kh(608$8+kw3ub8y*kg^c4q)ct@4j
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['13.207.153.186', '172.26.15.176', 'sri.prathibhasolutions.com', 'www.sri.prathibhasolutions.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '13.207.153.186', '172.26.15.176', 'sri.prathibhasolutions.com', 'www.sri.prathibhasolutions.com']
 
 
 # Application definition
